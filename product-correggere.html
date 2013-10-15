@@ -1,0 +1,956 @@
+<!-- La colonna di sinistra con le immagini deve agere un padding right più elevato (ho messo width: 142px;)
+     Ps: Ci sono varie piccole madifiche alla tabella del codice / prezzo prodotto, cercate di riprodurle
+     - Inoltre ho modificato sia l'immagine dell'iva agevolata in basso che del successivo paragrafetto sulle spedizioni
+
+	 Attenzione: Qui vi manca da includere il js del vostro shadowbox e poco altro penso. -->
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="it"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="it"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="it"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 ie-lt10 no-js" lang="it"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="it"><!--<![endif]-->
+<!-- the "no-js" class is for Modernizr. -->
+<head id="www-sitename-com" data-template-set="html5-reset">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="title" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="google-site-verification" content="" />
+    <meta name="Copyright" content="" />
+    <link rel="shortcut icon" href="_/img/favico-boxdoccia.png" /><!-- size: 16x16 or 32x32 -->
+    <link rel="stylesheet" href="_/css/reset.css" />
+    <link rel="stylesheet" href="_/css/style.css" />
+    <link rel="stylesheet" href="_/square/blue.css" />
+    <!-- Larghezza del menu in top macro categorie: 100 / num_categorie -->
+    <style>#top-categories ul li { width: 20%; }</style>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
+    <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write("<script src='_/js/jquery-1.9.1.min.js'>\x3C/script>")</script>
+    <script src="_/js/modernizr-2.6.2.dev.js"></script>
+    <!-- Facebook -->
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="_/img/yourhub-logo.png" />
+</head>
+<body>
+<div class="wrapper">
+	<!-- Header -->
+	<div class="inner">
+		<header class="inner maximize">
+			<div class="header-left float-left maximize-height">
+				<h1 class="inline"><a href="/" title="Box Doccia Idromassaggio">B<span class="sub">ox</span> <span class="bg-h1 bg-blue">D<span class="sub">occia</span></span> I<span class="sub">dromassaggio</span></a></h1>
+			</div>
+			<div class="login-box bg-white">
+				<div class="float-left">
+					<table id="tb-login" class="color-blue">
+						<tr>
+							<td><input type="text" placeholder="E-mail" /></td>
+							<td rowspan="2" valign="middle" class="login-action valign-middle border-lightgrey-right">
+							    <a class="rollover-bb" href="#">login</a>
+							</td>
+							<td class="registration-td log-line1 border-lightgrey-right valign-middle">
+								<div><a class="rollover-bb">registrati</a></div>
+							</td>
+							<td class="cart-box log-line1 valign-middle" valign="middle">
+								<div><a class="rollover-bb">contatti</a></div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="password" class="no-margin" placeholder="Password" />
+							</td>
+							<td class="registration-td border-lightgrey-right log-line2 valign-middle">
+								<div><a class="rollover-bb">password dimenticata?</a></div>
+							</td>
+							<td class="cart-box log-line2 valign-middle">
+								<div><a class="rollover-bb"><li class="iset-cart"></li> carrello</a></div>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</header>
+	</div>
+	<div class="clearfix"></div>
+	<div class="inner clear-50"></div>
+	<div class="clearfix"></div>
+	<div class="inner">
+		<!-- Contenuto + Menu + Sidebar -->
+		<div class="content maximize">
+			<!-- Menu -->
+			<nav id="top-categories" class="maximize bg-blue">
+				<ul>
+					<li class="macro-cat active" data-submenu="box-doccia-submenu"><a href="file:///C:/wamp/www/boxdocciaidro-new.it/category-test.html">Box doccia</a></li>
+					<li class="macro-cat" data-submenu="saune-submenu"><a>Saune</a></li>
+					<li class="macro-cat" data-submenu="vasche-da-bagno-submenu"><a>Vasche da bagno</a></li>
+					<li class="macro-cat" data-submenu="docce-da-esterno-submenu"><a>Docce da esterno</a></li>
+					<li class="macro-cat" data-submenu="vasche-da-esterno-submenu"><a>Vasche da esterno</a></li>
+				</ul>
+			</nav>
+			<div class="middle-content">
+				<!-- Contenuto -->
+				<div class="text">
+					<script type="text/javascript">
+
+			function priceit(its,indice){
+				var prezzo = new Array();
+				var codice = new Array();
+				var sconto = new Array();
+
+						prezzo[0] = "1900";
+					codice[0] = "I-SB894R";
+					sconto[0] = "1059";
+					//alert(euroformat(sconto[0]));
+						prezzo[1] = "1900";
+					codice[1] = " I-SB894L";
+					sconto[1] = "1059";
+					//alert(euroformat(sconto[1]));
+
+
+
+				document.getElementById(its).elements["pos"].value = indice;
+
+				document.getElementById(its).elements["codice"].value = codice[indice];
+				document.getElementById("codiceview").innerHTML = codice[indice];
+
+				document.getElementById(its).elements["prezzo"].value = euroformat(prezzo[indice]);
+				document.getElementById("prezzoview").innerHTML = euroformat(prezzo[indice]);
+
+				document.getElementById(its).elements["sconto"].value = euroformat(sconto[indice]);
+
+				document.getElementById("scontoview").innerHTML = euroformat(sconto[indice]);
+				document.getElementById("reload").innerHTML = "";
+				document.getElementById('selprov').selectedIndex=0;
+
+			}
+
+			function get_prezzo(selid){
+
+				indice = document.getElementById(selid).selectedIndex;
+				var prezzo = new Array();
+
+						prezzo[0] = "1059";
+						prezzo[1] = "1059";
+
+
+				//alert(prezzo[indice]);
+				return prezzo[indice];
+			}
+
+			function get_peso(selid){
+
+				indice = document.getElementById(selid).selectedIndex;
+				var peso = new Array();
+
+						peso[0] = "266";
+						peso[1] = "266";
+
+
+				//alert(peso[indice]);
+				return peso[indice];
+			}
+			</script>
+
+			<div class="percorso">
+			Percorso: <a href="http://boxdocciaidromassaggio.it/box_doccia/" title="BOX DOCCIA IN CRISTALLO E CABINE IDROMASSAGGIO MULTIFUNZIONE">Box doccia</a> <span class="separator"></span> <a href="http://boxdocciaidromassaggio.it/box_doccia/box_doccia_idromassaggio/" title="Box doccia idromassaggio">Box doccia idromassaggio</a> <span class="separator"></span> <a href="http://boxdocciaidromassaggio.it/box_doccia/box_doccia_idromassaggio/box_doccia_idromassaggio_100_x_75_rumba.htm" title="box doccia idromassaggio 100 x 75 Rumba">box doccia idromassaggio 100 x 75 Rumba</a> <span class="separator"></span>
+				</div>
+
+			<h1>box doccia idromassaggio 100 x 75 Rumba</h1><br>
+			<form id="form_123" name="form_123" style="display: inline;" action="javascript:intobasket('form_123')" method="POST">
+			<table cellpadding="0" style="font-size: 12px;">
+			  <tbody><tr>
+			    <td style="width: 142px;" valign="top"><a rel="shadowbox" href="/foto/640/9207138I-SB894destra.jpg"><img src="http://boxdocciaidromassaggio.it/uploadcms/k_120/9207138I-SB894destra.jpg" title="Clicca qui per ingrandire" alt="Clicca qui per ingrandire" style="float: left; margin-right: 10px;" class="imgnews"></a>
+				   <a rel="shadowbox" href="/foto/640/5799825cromoterapia2.jpg"><img class="imgnews" src="http://boxdocciaidromassaggio.it/uploadcms/k_120/5799825cromoterapia2.jpg" title="cc" alt="Clicca qui per ingrandire" style="margin-top: 10px; margin-bottom: 10px;"></a>
+			   <a rel="shadowbox" href="/foto/640/9520429cromoterapia.jpg"><img class="imgnews" src="http://boxdocciaidromassaggio.it/uploadcms/k_120/9520429cromoterapia.jpg" title="cc" alt="Clicca qui per ingrandire" style="margin-top: 10px; margin-bottom: 10px;"></a>
+			   <a rel="shadowbox" href="/foto/640/8670276cromoterapia3.jpg"><img class="imgnews" src="http://boxdocciaidromassaggio.it/uploadcms/k_120/8670276cromoterapia3.jpg" title="cc" alt="Clicca qui per ingrandire" style="margin-top: 10px; margin-bottom: 10px;"></a>
+			   <a rel="shadowbox" href="/foto/640/7317667soffione centrale.jpg"><img class="imgnews" src="http://boxdocciaidromassaggio.it/uploadcms/k_120/7317667soffione centrale.jpg" title="cc" alt="Clicca qui per ingrandire" style="margin-top: 10px; margin-bottom: 10px;"></a>
+			   <a rel="shadowbox" href="/foto/640/7206640idromassaggio.jpg"><img class="imgnews" src="http://boxdocciaidromassaggio.it/uploadcms/k_120/7206640idromassaggio.jpg" title="cc" alt="Clicca qui per ingrandire" style="margin-top: 10px; margin-bottom: 10px;"></a>
+
+				</td>
+				<td valign="top">
+
+			         <table class="tb-product-info" cellpadding="3" cellspacing="0" style="font-size: 13px; line-height:25px;">
+						<tbody><tr>
+							<td class="technique"><span style="color: #3C6C9A;"><b>Codice: </b></span></td>
+							<td>
+												<input type="hidden" name="codice" id="codice" value="I-SB894R">
+								<span name="codiceview" id="codiceview">I-SB894R</span>
+							</td>
+						</tr>
+					    <tr>
+						  <td class="technique"><span style="color: #3C6C9A;"><b>Quantità minima:</b></span></td>
+						  <td>1</td>
+						</tr>
+						<!-- <tr>
+						  <td><span style="color: #3C6C9A;"><b>Invio:</b></span></td>
+						  <td>0 giorni lavorativi</td>
+						</tr> -->
+						<tr>
+							<td class="technique"><span style="color: #3C6C9A; padding-right: 20px;"><b>Prezzo di Listino:</b></span></td>
+							<td>
+
+								<input type="hidden" name="prezzo" id="prezzo" value="1.900,00">
+
+								<!-- Controllo del prezzo se uguale al prezzo scontato -->
+													<strike><span name="prezzoview" id="prezzoview">1.900,00</span> €</strike>
+
+							</td>
+						</tr>
+						<!-- Controllo del prezzo se uguale al prezzo scontato -->
+									<tr>
+							<td class="technique">
+							<span style="color: #3C6C9A; display: block; float: left; margin-top: -5px;"><b>Scontato a:</b></span>
+							</td>
+							<td>
+								<span style="color: #4B7A9E; font-size: 16px; font-weight: bold;">
+								<input type="hidden" name="sconto" id="sconto" value="1.059,00">
+								<span name="scontoview" id="scontoview">1.059,00 € iva inclusa</span>
+								</span> <br>
+								<b>(sconto del 44 %)</b>
+							</td>
+						</tr>
+									<tr>
+						  <td class="technique"><span style="color: #3C6C9A;"><b>Versione:</b></span></td>
+						  <td>
+						  			  <select name="dimensioni" id="dimensioni" onchange="priceit('form_123',this.selectedIndex)" style="max-width: 205px;">
+												<option value="Appoggio parete destra">Appoggio parete destra</option>
+												<option value="Appoggio parete sinistra">Appoggio parete sinistra</option>
+											</select>
+						  </td>
+						</tr>
+									<tr>
+						<td></td>
+						<td>
+							<div style="margin: 10px 0px 5px 0px;"><b>Calcolo stima totale con spedizione:</b></div>
+							<div>
+								Provincia:<select name="provincia" id="selprov" onchange="prz = get_prezzo('dimensioni');  peso = get_peso('dimensioni'); cmsload('http://boxdocciaidromassaggio.it/shoppingcart.php?id_provincia2='+this.options[this.selectedIndex].value+'&amp;peso='+peso+'&amp;tot_imp='+prz, 'reload')" style="margin-left: 20px;">
+																<option>Seleziona</option>
+
+											<option value="1">Agrigento</option>
+
+											<option value="2">Alessandria</option>
+
+											<option value="3">Ancona</option>
+
+											<option value="4">Aosta</option>
+
+											<option value="5">Aquila</option>
+
+											<option value="6">Arezzo</option>
+
+											<option value="7">Ascoli Piceno</option>
+
+											<option value="8">Asti</option>
+
+											<option value="9">Avellino</option>
+
+											<option value="10">Bari</option>
+
+											<option value="11">Barletta Andria Trani</option>
+
+											<option value="12">Belluno</option>
+
+											<option value="13">Benevento</option>
+
+											<option value="14">Bergamo</option>
+
+											<option value="15">Biella</option>
+
+											<option value="16">Bologna</option>
+
+											<option value="17">Bolzano</option>
+
+											<option value="18">Brescia</option>
+
+											<option value="19">Brindisi</option>
+
+											<option value="20">Cagliari</option>
+
+											<option value="21">Caltanissetta</option>
+
+											<option value="22">Campobasso</option>
+
+											<option value="23">Carbonia-Iglesias</option>
+
+											<option value="24">Caserta</option>
+
+											<option value="25">Catania</option>
+
+											<option value="26">Catanzaro</option>
+
+											<option value="27">Chieti</option>
+
+											<option value="28">Como</option>
+
+											<option value="29">Cosenza</option>
+
+											<option value="30">Cremona</option>
+
+											<option value="31">Crotone</option>
+
+											<option value="32">Cuneo</option>
+
+											<option value="33">Enna</option>
+
+											<option value="34">Fermo</option>
+
+											<option value="35">Ferrara</option>
+
+											<option value="36">Firenze</option>
+
+											<option value="37">Foggia</option>
+
+											<option value="38">Forlì</option>
+
+											<option value="39">Frosinone</option>
+
+											<option value="40">Genova</option>
+
+											<option value="41">Gorizia</option>
+
+											<option value="42">Grosseto</option>
+
+											<option value="43">Imperia</option>
+
+											<option value="44">Isernia</option>
+
+											<option value="45">L'Aquila</option>
+
+											<option value="46">La Spezia</option>
+
+											<option value="47">Latina</option>
+
+											<option value="48">Lecce</option>
+
+											<option value="49">Lecco</option>
+
+											<option value="50">Livorno</option>
+
+											<option value="51">Lodi</option>
+
+											<option value="52">Lucca</option>
+
+											<option value="53">Macerata</option>
+
+											<option value="54">Mantova</option>
+
+											<option value="55">Massa-Carrara</option>
+
+											<option value="56">Matera</option>
+
+											<option value="57">Medio Campidano</option>
+
+											<option value="58">Messina</option>
+
+											<option value="59">Milano</option>
+
+											<option value="60">Modena</option>
+
+											<option value="61">Monza Brianza</option>
+
+											<option value="62">Napoli</option>
+
+											<option value="63">Novara</option>
+
+											<option value="64">Nuoro</option>
+
+											<option value="65">Ogliastra</option>
+
+											<option value="66">Olbia-Tempio</option>
+
+											<option value="67">Oristano</option>
+
+											<option value="68">Padova</option>
+
+											<option value="69">Palermo</option>
+
+											<option value="70">Parma</option>
+
+											<option value="71">Pavia</option>
+
+											<option value="72">Perugia</option>
+
+											<option value="73">Pesaro e Urbino</option>
+
+											<option value="74">Pescara</option>
+
+											<option value="75">Piacenza</option>
+
+											<option value="76">Pisa</option>
+
+											<option value="77">Pistoia</option>
+
+											<option value="78">Pordenone</option>
+
+											<option value="79">Potenza</option>
+
+											<option value="80">Prato</option>
+
+											<option value="81">Ragusa</option>
+
+											<option value="82">Ravenna</option>
+
+											<option value="83">Reggio di Calabria</option>
+
+											<option value="84">Reggio Emilia</option>
+
+											<option value="85">Rieti</option>
+
+											<option value="86">Rimini</option>
+
+											<option value="87">Roma</option>
+
+											<option value="88">Rovigo</option>
+
+											<option value="89">Salerno</option>
+
+											<option value="90">Sassari</option>
+
+											<option value="91">Savona</option>
+
+											<option value="92">Siena</option>
+
+											<option value="93">Siracusa</option>
+
+											<option value="94">Sondrio</option>
+
+											<option value="95">Taranto</option>
+
+											<option value="96">Teramo</option>
+
+											<option value="97">Terni</option>
+
+											<option value="98">Torino</option>
+
+											<option value="99">Trapani</option>
+
+											<option value="100">Trento</option>
+
+											<option value="101">Treviso</option>
+
+											<option value="102">Trieste</option>
+
+											<option value="103">Udine</option>
+
+											<option value="104">Varese</option>
+
+											<option value="105">Venezia</option>
+
+											<option value="106">Verbania</option>
+
+											<option value="107">Verbano-Cusio-Ossola</option>
+
+											<option value="108">Vercelli</option>
+
+											<option value="109">Verona</option>
+
+											<option value="110">Vibo Valentia</option>
+
+											<option value="111">Vicenza</option>
+
+											<option value="112">Viterbo</option>
+															</select>
+							</div>
+
+							<div id="reload" style="display: inline;"></div>
+							<div id="fixme" style="margin-bottom: 10px;"></div>
+
+						</td>
+						</tr>
+						<tr>
+						  <td class="technique"><span style="color: #3C6C9A;"><b>Quantità:</b></span></td>
+						  <td>
+						  	<input type="text" name="quantita" value="1" style="margin-right: 42px; width: 30px;">
+							<a class="red-btn float-right" href="javascript:document.form_123.submit();" title="Aggiungi al carrello">Aggiungi al carrello</a> </td>
+						</tr>
+
+					 </tbody></table>
+
+
+
+
+			<br>
+			<ul class="caratteristiche">
+			    <h3>Caratteristiche</h3><br>
+			    <li>Disponibile sia con appoggio destro che sinistro</li>
+			    <li>Idromassaggio dorsale con seduta</li>
+			    <li>Generatore di vapore per bagno turco e aromaterapia</li>
+			    <li>Radio&nbsp;</li>
+			    <li>Cromoterapia</li>
+			    <li>Vetri temperati dello spessore di 6 mm e pavimento antiscivolo</li>
+			    <li>Soffione centrale a pioggia</li>
+			    <li>Specchio</li>
+			    <li>Minicomputer LCD</li>
+			</ul>
+			<h3>Il lusso di una Spa direttamente a casa tua</h3>
+			<br>
+			<div>Quante volte tornando a casa dopo una lunga giornata avete desiderato concederti un momento tutto per voi, per rilassarvi e farvi scivolare via di dosso la stanchezza e lo stress? Ebbene, con&nbsp;<em><strong>Rumba</strong></em>&nbsp;questa piccola coccola quotidiana può trasformarsi in una vera e propria<strong> esperienza completa di lusso e benessere</strong>. Il nostro&nbsp;<strong>box doccia idromassaggio</strong>&nbsp;può infatti svolgere tutte le funzioni di una piccola&nbsp;<strong>Spa domestica, e a un prezzo davvero eccezionale</strong>.</div>
+			<div>&nbsp;</div>
+			<h3>Un box doccia full optional</h3>
+			<div>&nbsp;</div>
+			<div>Scordatevi i semplici box doccia tradizionali.&nbsp;<em>Rumba</em>&nbsp;è molto più di quanto sia mai entrato a casa vostra. Le sue misure&nbsp;<strong>100x75x220h cm&nbsp;</strong>lo rendono&nbsp;<strong>adatto anche a un bagno di piccole dimensioni</strong>, ma al suo interno si trova tutto quello che serve per fare una&nbsp;<strong>full immersion nel benessere</strong>. Nonostante il piccolo ingombro e il prezzo a dir poco stupefacente, non manca davvero nulla in questo box doccia completo di tutti i comfort più capaci di regalare relax e comfort.&nbsp;</div>
+			<div>&nbsp;</div>
+			<h3>Il piacere dell'idromassaggio dorsale</h3>
+			<div>&nbsp;</div>
+			<div><strong><em>Rumba</em></strong>&nbsp;è dotato di una&nbsp;<strong>comodissima seduta</strong>&nbsp;collocata sotto&nbsp;<strong>8 idro-jet</strong>&nbsp;capaci di proiettare un piacevolissimo getto direttamente sulla schiena. Un&nbsp;<strong>massaggio davvero rilassante</strong>&nbsp;e in grado di sciogliere qualunque tensione.&nbsp;</div>
+			<div>&nbsp;</div>
+			<h3>Diverse tipologie di getto d'acqua</h3>
+			<div>&nbsp;</div>
+			<div>Perché accontentarsi di una semplice doccia, quando si può avere molto di più? In questo box sono disponibili&nbsp;<strong>diverse possibilità per regolare a piacimento il getto d'acqua</strong>. Il soffione centrale è posizionato sulla parete superiore del box e regala un getto a pioggia, ma si può anche utilizzare l'ormai classico&nbsp;<strong>getto rimovibile</strong>.</div>
+			<div>&nbsp;<br>
+			<em>  </em></div>
+			<div style="text-align: center;"><img width="176" height="250" src="http://boxdocciaidromassaggio.it/editorcms/image/I-SB894(1).jpg" alt="box doccia idromassaggio Rumba versione sx"><img width="176" height="250" src="http://boxdocciaidromassaggio.it/editorcms/image/I-SB894destra.jpg" alt="box doccia idromassaggio Rumba versione dx"><br>
+			<em>versione appoggio a sinistra &nbsp; &nbsp; </em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <em>versione appoggio a destra<br>
+			</em></div>
+			<h3><br>
+			Provate i benefici della cromoterapia</h3>
+			<div>&nbsp;</div>
+			<div>Il&nbsp;<strong>soffione centrale</strong>&nbsp;offre anche la possibilità di regolare il&nbsp;<strong>colore della luce</strong>&nbsp;che si desidera avere quando si entra nel box. Ad ogni colore corrisponde un tipo diverso di energia, per essere più carichi la mattina e più rilassati la sera.</div>
+			<div><br>
+			<h3>E' anche bagno turco</h3>
+			<div>&nbsp;</div>
+			<div>Il&nbsp;<strong>generatore di vapore</strong>&nbsp;è di certo una delle caratteristiche più ambite da coloro che amano il relax. Esso infatti permette di sperimentare nel proprio bagno i benefici di un bagno turco, un vero e proprio toccasana per la pelle e per il corpo in generale. La steam box del generatore permette anche l'inserimento di&nbsp;<strong>essenze</strong>, per ricevere nel vostro hammam domestico &nbsp;anche la carezza profumata, tonificante e ristoratrice, dell'<strong>aromaterapia</strong>.&nbsp;</div>
+			<div>&nbsp;</div>
+			<h3>Lo specchio per i trattamenti di bellezza</h3>
+			<div>&nbsp;</div>
+			<div><em><strong>Rumba</strong></em>&nbsp;permette di applicare al meglio i propri trattamenti di bellezza senza uscire dal box doccia. Un&nbsp;<strong>pratico specchio</strong>&nbsp;è infatti collocato al suo interno e permette di applicare una maschera per la pelle o per i capelli, rimuoverne una o osservarne i risultati senza mai abbandonare il piacevole ambiente creato al suo interno secondo le vostre esigenze.&nbsp;<br>
+			<br>
+			&nbsp;</div>
+			<div style="text-align: center;"><a href="/editorcms/ambientazione_I-SB894.jpg"><img width="350" height="264" alt="ambientazione Rumba" src="http://boxdocciaidromassaggio.it/editorcms/image/ambientazione_I-SB894.jpg"></a></div>
+			<div>&nbsp;</div>
+			<h3>La tecnologia al servizio del benessere</h3>
+			<div>&nbsp;</div>
+			<div>Nel nostro box doccia indromassaggio è possibile ascoltare la&nbsp;<strong>radio</strong>&nbsp;e regolare tutti i dettagli della vostra esperienza sensoriale grazie a un&nbsp;<strong>minicomputer con schermo LCD digitale</strong>, facilissimo da usare, efficiente ed elegante.&nbsp;</div>
+			<div>&nbsp;</div>
+			<h3>La sicurezza dei materiali</h3>
+			<div>&nbsp;</div>
+			<div>Il&nbsp;<strong>vetro temperato&nbsp;</strong>del box doccia è spesso 6 mm e il pavimento è realizzato per essere sicuro e&nbsp;<strong>antiscivolo</strong>.&nbsp;</div>
+			<div>&nbsp;</div>
+			<h3>Grande qualità, design superbo e prezzo imbattibile</h3>
+			<div>&nbsp;</div>
+			<div>Il nostro box doccia idromassaggio&nbsp;<strong><em>Rumba</em></strong>&nbsp;è un prodotto di&nbsp;<strong>altissima qualità</strong>, realizzato con i <strong>migliori materiali</strong>&nbsp;e fatto per durare a lungo. Nonostante questo ha un prezzo davvero basso, perché crediamo che la qualità debba essere&nbsp;<strong>accessibile a tutti</strong>. Per mantenere i prezzi bassi preferiamo risparmiare sui costi di gestione e trattare direttamente con i produttori, così da offrire i migliori prodotti ai prezzi più competitivi.<br>
+			<br>
+			<div style="text-align: center;"><img width="116" height="129" src="http://boxdocciaidromassaggio.it/editorcms/image/imballo(1).jpg" alt="imballaggio"><br>
+			<em>imballaggio</em></div>
+			<h3>Caratteristiche</h3>
+			<div>•<span class="Apple-tab-span" style="white-space: pre;">	</span>Dimensioni 100x75x220h cm</div>
+			<div>•<span class="Apple-tab-span" style="white-space: pre;">	</span>Disponibile sia con appoggio destro che sinistro</div>
+			<div>•<span class="Apple-tab-span" style="white-space: pre;">	</span>Idromassaggio dorsale con seduta (8 idro-jet)</div>
+			<div>•<span class="Apple-tab-span" style="white-space: pre;">	</span>Generatore di vapore per bagno turco da 3000 Watt e aromaterapia</div>
+			<div>•<span class="Apple-tab-span" style="white-space: pre;">	</span>Radio&nbsp;</div>
+			<div>•<span class="Apple-tab-span" style="white-space: pre;">	</span>Cromoterapia</div>
+			<div>•<span class="Apple-tab-span" style="white-space: pre;">	</span>Vetri in cristallo dello spessore di 6 mm (anteriori trasparenti) e pavimento antiscivolo</div>
+			<div>•<span class="Apple-tab-span" style="white-space: pre;">	</span>Soffione centrale a pioggia</div>
+			<div>•<span class="Apple-tab-span" style="white-space: pre;">	</span>Minicomputer LCD</div>
+			<div style="text-align: center;"><strong><span style="color: rgb(255, 0, 0);"><br>
+			SCHEDE TECNICHE E MANUALI<br>
+			<a href="/editorcms/I-SB894(8).pdf"><img width="74" height="80" src="http://boxdocciaidromassaggio.it/editorcms/image/PDF(25).jpg" alt="PDF"><br>
+			manuale.pdf</a> </span></strong></div>
+			<div>&nbsp;</div>
+			</div>
+			</div>
+				<!-- Aggiornati file immagine testuali su info agevolazioni IVA / spedizioni -->
+				<br><br>
+				Richiedi gratuitamente la:<br><a href="../../editorcms/guida-agevolazione-irpef.pdf" target="_blank">GUIDA PER LA RICHIESTA DI AGEVOLAZIONE IRPEF</a>	<br><br>
+				<center>
+				<a title="Modulo iva agevolata" target="_blank" href="http://www.boxdocciaidromassaggio.it/editorcms/file/dichiarazione_iva_agevolata.doc">
+					<img src="_/img/box-iva-agevolata.png" alt="Agevolazione IVA per boxdoccia" width="600" height="467">
+				</a>
+				<br /><br />
+				<img src="_/img/info-spedizioni-boxdoccia.png" width="603" height="809" alt="informazioni spedizione box doccia" />
+
+			  <br><br> <br><br><!-- AddThis Button BEGIN -->
+			<div class="addthis_toolbox addthis_default_style ">
+			<a class="addthis_button_facebook_like at300b" fb:like:layout="button_count"><div class="fb-like fb_edge_widget_with_comment fb_iframe_widget" data-ref=".UlfvVLpafSw.like" data-layout="button_count" data-show_faces="false" data-action="like" data-width="90" data-font="arial" data-href="http://boxdocciaidromassaggio.it/box_doccia/box_doccia_idromassaggio/box_doccia_idromassaggio_100_x_75_rumba.htm" data-send="false" fb-xfbml-state="rendered"><span style="height: 20px; width: 72px;"><iframe id="f3326fd344" name="f1164db5a" scrolling="no" title="Like this content on Facebook." class="fb_ltr" src="http://www.facebook.com/plugins/like.php?action=like&amp;api_key=172525162793917&amp;channel_url=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D27%23cb%3Df1fb0b6c74%26domain%3Dboxdocciaidromassaggio.it%26origin%3Dhttp%253A%252F%252Fboxdocciaidromassaggio.it%252Ff1a5b4773%26relation%3Dparent.parent&amp;colorscheme=light&amp;extended_social_context=false&amp;font=arial&amp;href=http%3A%2F%2Fboxdocciaidromassaggio.it%2Fbox_doccia%2Fbox_doccia_idromassaggio%2Fbox_doccia_idromassaggio_100_x_75_rumba.htm&amp;layout=button_count&amp;locale=en_US&amp;node_type=link&amp;ref=.UlfvVLpafSw.like&amp;sdk=joey&amp;send=false&amp;show_faces=false&amp;width=90" style="border: none; overflow: hidden; height: 20px; width: 72px;"></iframe></span></div></a>
+			<a class="addthis_button_tweet at300b"><iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="http://platform.twitter.com/widgets/tweet_button.1381275758.html#_=1381494614560&amp;count=horizontal&amp;counturl=http%3A%2F%2Fboxdocciaidromassaggio.it%2Fbox_doccia%2Fbox_doccia_idromassaggio%2Fbox_doccia_idromassaggio_100_x_75_rumba.htm&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2Fboxdocciaidromassaggio.it%2Fbox_doccia%2Fbox_doccia_idromassaggio%2Fbox_doccia_idromassaggio_100_x_75_rumba.htm&amp;size=m&amp;text=Box%20Doccia%20Idromassaggio%20100%20x%2075%20Rumba%3A&amp;url=http%3A%2F%2Fboxdocciaidromassaggio.it%2Fbox_doccia%2Fbox_doccia_idromassaggio%2Fbox_doccia_idromassaggio_100_x_75_rumba.htm%23.UlfvVKsPxFU.twitter" class="twitter-share-button twitter-tweet-button twitter-count-horizontal" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 119px; height: 20px;"></iframe></a>
+			<a class="addthis_button_google_plusone at300b" g:plusone:size="medium"><div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 90px; height: 20px; background-position: initial initial; background-repeat: initial initial;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" tabindex="0" vspace="0" width="100%" id="I0_1381494614662" name="I0_1381494614662" src="https://apis.google.com/u/0/_/+1/fastbutton?usegapi=1&amp;bsv=o&amp;size=medium&amp;hl=en-US&amp;origin=http%3A%2F%2Fboxdocciaidromassaggio.it&amp;url=http%3A%2F%2Fboxdocciaidromassaggio.it%2Fbox_doccia%2Fbox_doccia_idromassaggio%2Fbox_doccia_idromassaggio_100_x_75_rumba.htm&amp;gsrc=3p&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.it.9qyrWZXi4k0.O%2Fm%3D__features__%2Fam%3DAQ%2Frt%3Dj%2Fd%3D1%2Frs%3DAItRSTPxlD0JQgBXFv47BZuxVAlb-4ehIA#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh&amp;id=I0_1381494614662&amp;parent=http%3A%2F%2Fboxdocciaidromassaggio.it&amp;pfname=&amp;rpctoken=35511280" data-gapiattached="true" title="+1"></iframe></div></a>
+			<a class="addthis_counter addthis_pill_style" href="#" style="display: inline-block;"><a class="atc_s addthis_button_compact"><span></span></a><a class="addthis_button_expanded" target="_blank" title="View more services" href="#"></a></a>
+			<div class="atclear"></div></div>
+			<!-- AddThis Button END --><br><br>
+			</center>
+
+			</td>
+			  </tr>
+			</tbody></table>
+				<input type="hidden" value="123" name="id_oggetto">
+				<input type="hidden" value="0" name="pos">
+				</form>
+			<script type="text/javascript">var modal;
+			function intobasket(myform)
+			     {
+				    modal = new Dialog({
+						title:'Aggiungi al carrello',
+						ajax:{ url:'http://boxdocciaidromassaggio.it/shoppingcart.php?tobasket=yes&'+create_request_string(document.getElementById(myform)),
+						options:{ parameters:{ 'key':'value' }, onComplete:function(t){
+						}
+					 }
+				   }
+			      });
+				  modal.open();
+				 }
+			function closebasket() {modal.close();}
+
+
+
+			</script>
+
+					<br><br>&nbsp;
+				</div>
+				<!-- Right Sidebar -->
+				<div class="right-sidebar">
+					<!-- Search bar -->
+					<div class="sidebar-search maximize sidebar-box">
+						<form action="search.php" method="POST" name="search_sidebar" class="simple_form_control">
+							<input type="text" name="search_1" placeholder="Ricerca prodotto..." class="search-bar maximize float-left" required/>
+							<div class="icon-search bg-blue inline control-btn"><li class="iset-search"></li></div>
+						</form>
+					</div>
+					<!-- Ordini Telefonici -->
+					<div class="sidebar-telephone maximize sidebar-box">
+						<div class="sidebar-thead bg-blue">Ordini e assistenza telefonica<li class="iset-tel2 icon-right"></li></div>
+						<div class="sidebar-context">
+							<div class="font-large1">0445/500021 &nbsp;&nbsp;<span class="font-medium">- Ordini</span></div>
+							<div class="font-large1">0445/1716127 <span class="font-medium">- Prodotti</span></div><br />
+							Dal Lunedì al Venerdì<br />
+							9:00-12.30 | 14:00-18.30
+						</div>
+					</div>
+					<!-- Categorie -->
+					<aside class="sidebar-categories maximize sidebar-box">
+						<div class="sidebar-thead bg-blue"><h2>Scegli le nostre proposte</h2><li class="iset-sale icon-right"></li></div>
+						<div class="sidebar-context">
+							<ul id="sidebar-categories-ul">
+								<li><a title="BOX DOCCIA IN CRISTALLO E CABINE IDROMASSAGGIO MULTIFUNZIONE">Box doccia</a>
+								<ul class="sottofigli">
+									<li><a title="Accessori">Accessori</a></li>
+									<li><a title="Box doccia idromassaggio">Box doccia idromassaggio</a></li>
+									<li><a title="Cabine doccia">Cabine doccia</a></li>
+									<li><a title="Colonne doccia">Colonne doccia</a></li>
+									<li><a title="Piatti doccia">Piatti doccia</a></li>
+									<li><a title="Sostituzione vasca con doccia">Sostituzione vasca con doccia</a></li>
+								</ul></li>
+								<li><a title="SAUNE INFRAROSSI E FINLANDESI ANCHE SU MISURA">Saune</a>
+								<ul class="sottofigli">
+									<li><a title="Accessori saune">Accessori saune</a></li>
+									<li><a title="controllo esterno per stufa di sauna">controllo esterno per stufa sauna</a></li>
+									<li><a title="Saune ad infrarossi">Saune ad infrarossi</a></li>
+									<li><a title="Saune finlandesi">Saune finlandesi</a></li>
+									<li><a title="Stufe per saune finlandesi">Stufe per saune finlandesi</a></li>
+								</ul></li>
+								<li><a title="VASCHE DA BAGNO E IDROMASSAGGIO DA INTERNI ED ESTERNI">Vasche da bagno</a>
+								<ul class="sottofigli">
+									<li><a title="Accessori vasche">Accessori vasche </a></li>
+									<li><a title="Vasche con sportello">Vasche con sportello </a></li>
+									<li><a title="Vasche da bagno">Vasche da bagno </a></li>
+									<li><a title="Vasche idromassaggio">Vasche idromassaggio </a></li>
+								</ul></li>
+								<li><a title="DOCCE DA ESTERNO CON RISCALDAMENTO SOLARE E TRADIZIONALE">Docce da esterno</a>
+								<ul class="sottofigli">
+								</ul></li>
+								<li><a title="Vasche da esterno">Vasche da esterno</a>
+								<ul class="sottofigli"></ul></li>
+							</ul>
+						</div>
+					</aside>
+					<!-- Maggiori Informazioni -->
+					<div class="sidebar-info maximize sidebar-box">
+						<div class="sidebar-thead bg-blue">Maggiori Informazioni<li class="iset-info icon-right"></li></div>
+						<div class="sidebar-context">
+							<ul>
+								<li><a>Contatti</a></li>
+								<li><a>Chi siamo</a></li>
+								<li><a>Dove siamo</a></li>
+								<li><a>Rapporto qualità prezzo</a></li>
+								<li><a>Pagamenti sicuri</a></li>
+								<li><a>Garanzia totale</a></li>
+								<li><a>Diritto di recesso</a></li>
+								<li><a>Spedizioni</a></li>
+								<li><a>Assistenza qualificata</a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- Newsletter -->
+					<div class="sidebar-newsletter maximize sidebar-box">
+						<div class="sidebar-thead bg-blue">Newsletter<li class="iset-mail icon-right"></li></div>
+						<div class="sidebar-context justify">
+							Iscriviti e rimarrai aggiornato, in modo assolutamente non invadente, sulle novità e promozioni particolari riservate agli iscritti alla nostra newsletter!
+							<form name="newsletter" id="newsletter" class="top-10 simple_form_control" method="post" action="/cmsnewsletter.php">
+								<input type="email" name="newsletter" placeholder="Email" required />
+								<a class="control-btn decoration-none">iscriviti</a>
+							</form>
+						</div>
+					</div>
+					<!-- Area Rivenditori -->
+					<div class="sidebar-rivenditori maximize sidebar-box">
+						<div class="sidebar-thead bg-blue">Area Rivenditori<li class="iset-bag icon-right"></li></div>
+						<div class="sidebar-context justify">
+							Quest'area è riservata ai possessori di partita iva che vogliono collaborare con noi. Se vuoi diventare un rivenditore ufficiale dei nostri prodotti oppure hai qualche altra proposta interessante / domanda da fare, <a id="contattaci" href="/contatti_rivenditori.html">CONTATTACI</a>.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+	<div class="inner clear-50"></div>
+	<div class="clearfix"></div>
+	<div class="footer">
+		<footer class="bg-white">
+			<div class="inner font-small1">
+				<!-- Link utili -->
+				<div class="internal-info">
+					<center>
+						<table class="footer-links">
+							<tr>
+								<td>
+									<ul class="inline">
+										<li><a>Chi siamo</a></li>
+										<li><a>Dove siamo</a></li>
+										<li><a>Assistenza qualificata</a></li>
+									</ul>
+								</td>
+								<td>
+									<ul class="inline">
+										<li><a>Contatti</a></li>
+										<li><a>Registrati</a></li>
+										<li><a>Condizioni di vendita</a></li>
+
+									</ul>
+								</td>
+								<td>
+									<ul class="inline">
+										<li><a>Categorie</a></li>
+										<li><a>Garanzia totale</a></li>
+										<li><a>Pagamenti sicuri</a></li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</center>
+				</div>
+				<!-- Pagamenti accettati -->
+				<div class="payments">
+					<center>
+						<li class="sp-visa"></li>
+						<li class="sp-visa-electron"></li>
+						<li class="sp-mastercard"></li>
+						<li class="sp-paypal"></li>
+						<li class="sp-postepay"></li>
+						<li class="sp-contrassegno"></li>
+						<li class="sp-bonifico"></li>
+						<li class="sp-rateale"></li>
+					</center>
+				</div>
+				<!-- Info società -->
+				<center>
+					VB Italia - P.iva 03301210245 - Tel. 0445500021 - Via Lago di Garda, 118 36015 Schio Vicenza -
+					<a href="mailto:info@boxdocciaidromassaggio.it">info@boxdocciaidromassaggio.it</a><br />
+					Box doccia idromassaggio - <a href="http://www.topsuimotori.com" title="Posizionamento Siti">Posizionamento Siti</a>
+					by Topsuimotori.com
+				</center>
+			</div>
+		</footer>
+	</div>
+</div>
+<!-- Contenutore sottomenu display on hover - Box doccia -->
+<div id="box-doccia-submenu" class="submenu-container bg-white">
+	<!-- Immagine della categoria prodotto (settata a gestionale - tool già pronto da sistemare, vedi ultime mail) -->
+	<table class="img-category-container border-lightgrey-right float-left inline">
+		<tr><td valign="middle" class="valign-middle">
+			<!-- Immagine che linka alla relativa categoria -->
+			<a>
+				<img class="img-category no-border" src="http://boxdocciaidromassaggio.it/uploadcms/k_220_250/9207138I-SB894destra.jpg" />
+			</a>
+		</td></tr>
+	</table>
+	<div class="sub-categories">
+		<ul class="subcategories-list">
+			<li><a title="BOX DOCCIA IN CRISTALLO E CABINE IDROMASSAGGIO MULTIFUNZIONE">Box doccia</a>
+			<ul class="sottofigli">
+				<li><a title="Accessori">Accessori</a></li>
+				<li><a title="Box doccia idromassaggio">Box doccia idromassaggio</a></li>
+				<li><a title="Cabine doccia">Cabine doccia</a></li>
+				<li><a title="Colonne doccia">Colonne doccia</a></li>
+				<li><a title="Piatti doccia">Piatti doccia</a></li>
+				<li><a title="Sostituzione vasca con doccia">Base doccia in acrilico</a></li>
+			</ul></li>
+		</ul>
+	</div>
+	<!-- Ultimi prodotti: Limit 0, 7 ordinamento per ultimi elementi inseriti in macro / sottocategorie
+		 Attenzione: Tagliare limitare il numero di caratteri del nome prodotto a 70! -->
+	<div class="sub-lastitems">
+		<ul class="subcategories-list">
+			<li><a>Ultime Novità:</a>
+			<ul class="sottofigli">
+				<li><a>Box doccia idromassaggio con bagno turco Cheope 70x90</a></li>
+				<li><a>Box doccia idromassaggio con bagno turco Atena 170 x 80</a></li>
+				<li><a>Cabina doccia quadrata - spessore vetro 8 mm</a></li>
+				<li><a>Pannello doccia in acciaio 165 x 15</a></li>
+				<li><a>Cabina doccia in vetro temperato 170 x70</a></li>
+				<li><a>Set di cuscinetti/rotelle per cabina doccia in vetro</a></li>
+				<li><a>Prodotto vario con caratteristiche ecc ecc...</a></li>
+			</ul></li>
+		</ul>
+	</div>
+</div>
+<!-- Contenutore sottomenu display on hover - Saune -->
+<div id="saune-submenu" class="submenu-container bg-white">
+	<!-- Immagine della categoria prodotto (settata a gestionale - tool già pronto da sistemare, vedi ultime mail) -->
+	<table class="img-category-container border-lightgrey-right float-left inline">
+		<tr><td valign="middle" class="valign-middle">
+			<!-- Immagine che linka alla relativa categoria -->
+			<a>
+				<img class="img-category no-border" src="http://boxdocciaidromassaggio.it/uploadcms/k_220_250/saunainfrarossiangolo.JPG" />
+			</a>
+		</td></tr>
+	</table>
+	<div class="sub-categories">
+		<ul class="subcategories-list">
+			<li><a title="SAUNE INFRAROSSI E FINLANDESI ANCHE SU MISURA">Saune</a>
+			<ul class="sottofigli">
+				<li><a title="Accessori saune">Accessori saune</a></li>
+				<li><a title="controllo esterno per stufa di sauna">controllo esterno per stufa sauna</a></li>
+				<li><a title="Saune ad infrarossi">Saune ad infrarossi</a></li>
+				<li><a title="Saune finlandesi">Saune finlandesi</a></li>
+				<li><a title="Stufe per saune finlandesi">Stufe per saune finlandesi</a></li>
+			</ul></li>
+		</ul>
+	</div>
+	<!-- Ultimi prodotti: Limit 0, 7 ordinamento per ultimi elementi inseriti in macro / sottocategorie
+		 Attenzione: Tagliare limitare il numero di caratteri del nome prodotto a 70! -->
+	<div class="sub-lastitems">
+		<ul class="subcategories-list">
+			<li><a>Ultime Novità:</a>
+			<ul class="sottofigli">
+				<li><a>Sauna infra / finlandese con varie caratteristiche... 1</a></li>
+				<li><a>Sauna infra / finlandese con varie caratteristiche... 2</a></li>
+				<li><a>Sauna infra / finlandese con varie caratteristiche... 3</a></li>
+				<li><a>Sauna infra / finlandese con varie caratteristiche... 4</a></li>
+				<li><a>Sauna infra / finlandese con varie caratteristiche... 5</a></li>
+				<li><a>Sauna infra / finlandese con varie caratteristiche... 6</a></li>
+				<li><a>Sauna infra / finlandese con varie caratteristiche... 7</a></li>
+			</ul></li>
+		</ul>
+	</div>
+</div>
+<!-- Contenutore sottomenu display on hover - Vasche idromassaggio -->
+<div id="vasche-da-bagno-submenu" class="submenu-container bg-white">
+	<!-- Immagine della categoria prodotto (settata a gestionale - tool già pronto da sistemare, vedi ultime mail) -->
+	<table class="img-category-container border-lightgrey-right float-left inline">
+		<tr><td valign="middle" class="valign-middle">
+			<!-- Immagine che linka alla relativa categoria -->
+			<a>
+				<img class="img-category no-border" src="http://boxdocciaidromassaggio.it/uploadcms/k_220_250/vasca-idromassaggio-andromeda.jpg" />
+			</a>
+		</td></tr>
+	</table>
+	<div class="sub-categories">
+		<ul class="subcategories-list">
+			<li><a title="VASCHE DA BAGNO E IDROMASSAGGIO DA INTERNI ED ESTERNI">Vasche da bagno</a>
+			<ul class="sottofigli">
+				<li><a title="Accessori vasche">Accessori vasche </a></li>
+				<li><a title="Vasche con sportello">Vasche con sportello </a></li>
+				<li><a title="Vasche da bagno">Vasche da bagno </a></li>
+				<li><a title="Vasche idromassaggio">Vasche idromassaggio </a></li>
+			</ul></li>
+		</ul>
+	</div>
+	<!-- Ultimi prodotti: Limit 0, 7 ordinamento per ultimi elementi inseriti in macro / sottocategorie
+		 Attenzione: Tagliare limitare il numero di caratteri del nome prodotto a 70! -->
+	<div class="sub-lastitems">
+		<ul class="subcategories-list">
+			<li><a>Ultime Novità:</a>
+			<ul class="sottofigli">
+				<li><a>Vasca idromassaggio con varie caratteristiche... 1</a></li>
+				<li><a>Vasca idromassaggio con varie caratteristiche... 2</a></li>
+				<li><a>Vasca idromassaggio con varie caratteristiche... 3</a></li>
+				<li><a>Vasca idromassaggio con varie caratteristiche... 4</a></li>
+				<li><a>Vasca idromassaggio con varie caratteristiche... 5</a></li>
+				<li><a>Vasca idromassaggio con varie caratteristiche... 6</a></li>
+				<li><a>Vasca idromassaggio con varie caratteristiche... 7</a></li>
+			</ul></li>
+		</ul>
+	</div>
+</div>
+<!-- Contenutore sottomenu display on hover - Docce da esterno -->
+<div id="docce-da-esterno-submenu" class="submenu-container bg-white">
+	<!-- Immagine della categoria prodotto (settata a gestionale - tool già pronto da sistemare, vedi ultime mail) -->
+	<table class="img-category-container border-lightgrey-right float-left inline">
+		<tr><td valign="middle" class="valign-middle">
+			<!-- Immagine che linka alla relativa categoria -->
+			<a>
+				<img class="img-category no-border" src="http://boxdocciaidromassaggio.it/uploadcms/k_220_250/JOLLY_immagine_principale.jpg" />
+			</a>
+		</td></tr>
+	</table>
+	<div class="sub-categories">
+		<ul class="subcategories-list">
+			<li><a title="DOCCE DA ESTERNO CON RISCALDAMENTO SOLARE E TRADIZIONALE">Docce da esterno</a>
+			<ul class="sottofigli">
+			</ul></li>
+		</ul>
+	</div>
+	<!-- Ultimi prodotti: Limit 0, 7 ordinamento per ultimi elementi inseriti in macro / sottocategorie
+		 Attenzione: Tagliare limitare il numero di caratteri del nome prodotto a 70! -->
+	<div class="sub-lastitems">
+		<ul class="subcategories-list">
+			<li><a>Ultime Novità:</a>
+			<ul class="sottofigli">
+				<li><a>Doccia da esterno con varie caratteristiche... 1</a></li>
+				<li><a>Doccia da esterno con varie caratteristiche... 2</a></li>
+				<li><a>Doccia da esterno con varie caratteristiche... 3</a></li>
+				<li><a>Doccia da esterno con varie caratteristiche... 4</a></li>
+				<li><a>Doccia da esterno con varie caratteristiche... 5</a></li>
+				<li><a>Doccia da esterno con varie caratteristiche... 6</a></li>
+				<li><a>Doccia da esterno con varie caratteristiche... 7</a></li>
+			</ul></li>
+		</ul>
+	</div>
+</div>
+<!-- Contenutore sottomenu display on hover - Vasche da esterno -->
+<div id="vasche-da-esterno-submenu" class="submenu-container bg-white">
+	<!-- Immagine della categoria prodotto (settata a gestionale - tool già pronto da sistemare, vedi ultime mail) -->
+	<table class="img-category-container border-lightgrey-right float-left inline">
+		<tr><td valign="middle" class="valign-middle">
+			<!-- Immagine che linka alla relativa categoria -->
+			<a>
+				<img class="img-category no-border" src="http://boxdocciaidromassaggio.it/uploadcms/k_220_250/vasca_idromassaggio_esterno_gonfiabile_SPACASTELLO.jpg" />
+			</a>
+		</td></tr>
+	</table>
+	<div class="sub-categories">
+		<ul class="subcategories-list">
+			<li><a title="DOCCE DA ESTERNO CON RISCALDAMENTO SOLARE E TRADIZIONALE">Docce da esterno</a>
+			<ul class="sottofigli">
+			</ul></li>
+		</ul>
+	</div>
+	<!-- Ultimi prodotti: Limit 0, 7 ordinamento per ultimi elementi inseriti in macro / sottocategorie
+		 Attenzione: Tagliare limitare il numero di caratteri del nome prodotto a 70! -->
+	<div class="sub-lastitems">
+		<ul class="subcategories-list">
+			<li><a>Ultime Novità:</a>
+			<ul class="sottofigli">
+				<li><a>Vasca da esterno con varie caratteristiche... 1</a></li>
+				<li><a>Vasca da esterno con varie caratteristiche... 2</a></li>
+				<li><a>Vasca da esterno con varie caratteristiche... 3</a></li>
+				<li><a>Vasca da esterno con varie caratteristiche... 4</a></li>
+				<li><a>Vasca da esterno con varie caratteristiche... 5</a></li>
+				<li><a>Vasca da esterno con varie caratteristiche... 6</a></li>
+				<li><a>Vasca da esterno con varie caratteristiche... 7</a></li>
+			</ul></li>
+		</ul>
+	</div>
+</div>
+<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+     http://chromium.org/developers/how-tos/chrome-frame-getting-started 	 -->
+<script src="_/js/jquery.placeholder.js"></script>
+<script src="_/js/jquery.numeric.js"></script>
+<script src="_/js/jquery.catslider.js"></script>
+<script src="_/js/functions.js"></script>
+</body>
+</html>
